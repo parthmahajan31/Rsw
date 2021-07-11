@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Joining Task</string>
+    <string name="add_product">Add Product</string>
+    <string name="category">Category</string>
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="expiry">Expiry</string>
+    <string name="images">Images</string>
+    <string name="add_more_images">Add More Images</string>
+    <string name="save">Save</string>
+</resources>

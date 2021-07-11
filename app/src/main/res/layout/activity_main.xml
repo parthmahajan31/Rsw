@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Activity.MainActivity">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="@string/add_product"
+       android:textStyle="bold"
+       android:textColor="@color/black"
+       android:textSize="18sp"
+       android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight=".4"
+            android:layout_height="wrap_content"
+            android:text="@string/category"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <Spinner
+            android:spinnerMode="dialog"
+            android:padding="10dp"
+            android:id="@+id/categorySpinner"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight=".6"
+            android:background="@drawable/square_bg"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight=".4"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:padding="10dp"
+            android:id="@+id/nameET"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight=".6"
+            android:background="@drawable/square_bg"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:maxLines="1"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight=".4"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:padding="10dp"
+            android:id="@+id/descET"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight=".6"
+            android:background="@drawable/square_bg"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:maxLines="1"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight=".4"
+            android:layout_height="wrap_content"
+            android:text="@string/expiry"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:padding="10dp"
+            android:id="@+id/dateTV"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight=".5"
+            android:background="@drawable/square_bg"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:maxLines="1"
+            />
+
+        <ImageView
+            android:id="@+id/dateIV"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".1"
+            android:src="@drawable/ic_baseline_calendar_today_24"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight=".4"
+            android:layout_height="wrap_content"
+            android:text="@string/images"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/addImagesBTN"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight=".6"
+            android:background="@drawable/square_bg"
+            android:text="@string/add_more_images"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:maxLines="1"
+            />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerView"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        tools:listitem="@layout/list"/>
+
+
+
+
+
+        <Button
+            android:id="@+id/saveBTN"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/square_bg"
+            android:text="@string/save"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:maxLines="1"
+            />
+
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
